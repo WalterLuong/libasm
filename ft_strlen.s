@@ -7,6 +7,5 @@ bcl_while:
 	inc rdi
 	inc	rax
 	jmp	bcl_while
-
 end:
 	ret

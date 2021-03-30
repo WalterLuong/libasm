@@ -1,5 +1,4 @@
 global	ft_strcmp
-
 ft_strcmp:
 	xor		rax, rax
 str_cmp:
@@ -14,7 +13,6 @@ str_cmp:
 	inc rdi
 	inc rsi
 	jmp str_cmp
-
 end_strcmp:
 	sub rax, rbx
 	ret

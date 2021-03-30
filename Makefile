@@ -6,7 +6,7 @@
 #    By: wluong <wluong@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/25 16:34:08 by wluong            #+#    #+#              #
-#    Updated: 2021/03/29 17:46:31 by wluong           ###   ########.fr        #
+#    Updated: 2021/03/30 17:35:40 by wluong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,8 @@ NAME	=	libasm.a
 
 SRC		=	ft_strlen.s \
 			ft_strcmp.s \
-			ft_strcpy.s
+			ft_strcpy.s \
+			ft_write.s
 
 OBJS	= $(SRC:.s=.o)
 
