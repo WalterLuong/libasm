@@ -1,12 +1,10 @@
 global	ft_write
 ft_write:
-	mov	rax,  4		; system call number (sys_write)
+	mov	rax, 1		; system call number (sys_write)
 	syscall
-	jc	error_exit
-	mov rax, 1
-	syscall
+	cmp rax, 60
+	je	exit_error
 	ret
-error_exit:
+exit_error:
 	mov rax, -1
-	syscall
 	ret
