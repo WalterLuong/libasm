@@ -1,9 +1,7 @@
 global	ft_strcmp
 
 ft_strcmp:
-	mov		rax, 0
-	jmp		str_cmp
-
+	xor		rax, rax
 str_cmp:
 	movzx rax, BYTE[rdi]
 	movzx rbx, BYTE[rsi]
