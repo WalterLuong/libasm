@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: wluong <wluong@student.42.fr>              +#+  +:+       +#+         #
+#    By: user42 <user42@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/25 16:34:08 by wluong            #+#    #+#              #
-#    Updated: 2021/04/01 16:42:52 by wluong           ###   ########.fr        #
+#    Updated: 2021/04/02 00:35:09 by user42           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,17 +37,17 @@ $(NAME): $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
 	@ranlib $(NAME)
 	@echo "\e[0;31mCompilation..."
-	@sleep 2
+	@sleep 1
 	@$(CC) $(CFLAGS) main.c -L -lasm $(NAME)
 	@echo "\e[1;32mCompilation terminée !"
 	@mv a.out run_test
-	@sleep 1
+	@sleep 0.5
 	@echo "\e[1;33mLancez ./run_test"
 
 
 clean:
 	@echo "\e[0;31m[NETTOYAGE EN COURS ...]\e[0;m"
-	@sleep 2
+	@sleep 1
 	$(RM) $(OBJS)
 
 fclean:		clean

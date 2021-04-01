@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wluong <wluong@student.42.fr>              +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 10:17:17 by wluong            #+#    #+#             */
-/*   Updated: 2021/03/31 11:36:13 by wluong           ###   ########.fr       */
+/*   Updated: 2021/04/02 00:34:49 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,25 +19,21 @@ ssize_t		ft_write(int fd, const void *buf, size_t count);
 ssize_t 	ft_read(int fd, void *buf, size_t count);
 
 
-int		main(int ac, char **av)
+int		main(void)
 {
-	int fd;
-	int fd2;
-	int ret;
-	char str[4096 + 1];
+	char s1[] = "test";
+	char t1[] = "test";
+	char s2[] = "Bonjour";
+	char t2[] = "Bonjour";
+	char s3[] = "Autre test";
+	char t3[] = "Autre test";
+	char s4[] = "oui";
+	char t4[] = "oui";
 
-	fd = open(av[1], O_RDWR);
-	fd2 = open(av[1], O_RDONLY);
-	if (ac != 2)
-		printf("ERROR\n");
-	else
-	{
-		ft_write(fd, "walter luong", 12);
-		ret = ft_read(fd2, str, 12);
-		str[ret] = '\0';
-		printf("%s\n", str);
-	}
-	close(fd);
-	close(fd2);
+	printf("me : %s\n", ft_strcpy(s4, s2));
+	printf("true : %s\n", strcpy(t4, t2));
+	printf("me : %s\n", ft_strcpy(s1, s3));
+	printf("true : %s\n", strcpy(t1, t3));
+	
 	return (0);
 }
