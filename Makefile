@@ -6,7 +6,7 @@
 #    By: user42 <user42@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/25 16:34:08 by wluong            #+#    #+#              #
-#    Updated: 2021/04/02 00:35:09 by user42           ###   ########.fr        #
+#    Updated: 2021/04/02 01:00:25 by user42           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,7 +26,7 @@ RM		=	rm -f
 NASM	=	nasm
 FLAGS	=	-f elf64
 CC		=	gcc
-CFLAGS	=	-Wall -Wextra -Werror
+CFLAGS	=	-Wall -Wextra -Werror -no-pie
 
 %.o:		%.s
 	@$(NASM) $(FLAGS) -o $@ $<

@@ -6,7 +6,7 @@
 /*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 10:17:17 by wluong            #+#    #+#             */
-/*   Updated: 2021/04/02 00:34:49 by user42           ###   ########.fr       */
+/*   Updated: 2021/04/02 00:49:52 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,22 @@ size_t		ft_strcmp(const char *s1, const char *s2);
 char		*ft_strcpy(char *dst, char *src);
 ssize_t		ft_write(int fd, const void *buf, size_t count);
 ssize_t 	ft_read(int fd, void *buf, size_t count);
+char 		*ft_strdup(const char *s);
+
 
 
 int		main(void)
 {
 	char s1[] = "test";
-	char t1[] = "test";
-	char s2[] = "Bonjour";
-	char t2[] = "Bonjour";
-	char s3[] = "Autre test";
-	char t3[] = "Autre test";
-	char s4[] = "oui";
-	char t4[] = "oui";
+	char *s2;
+	char s3[] = "test";
+	char *s4;
 
-	printf("me : %s\n", ft_strcpy(s4, s2));
-	printf("true : %s\n", strcpy(t4, t2));
-	printf("me : %s\n", ft_strcpy(s1, s3));
-	printf("true : %s\n", strcpy(t1, t3));
+	s2 = ft_strdup(s1);
+	s4 = strdup(s3);
+
+	printf("me : %s\n", s2);
+	printf("me : %s\n", s4);
 	
 	return (0);
 }
