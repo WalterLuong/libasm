@@ -6,7 +6,7 @@
 #    By: wluong <wluong@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/25 16:34:08 by wluong            #+#    #+#              #
-#    Updated: 2021/03/30 23:51:46 by wluong           ###   ########.fr        #
+#    Updated: 2021/04/01 16:42:52 by wluong           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,8 @@ SRC		=	ft_strlen.s \
 			ft_strcmp.s \
 			ft_strcpy.s \
 			ft_write.s \
-			ft_read.s
+			ft_read.s \
+			ft_strdup.s
 
 OBJS	= $(SRC:.s=.o)
 
@@ -36,17 +37,22 @@ $(NAME): $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
 	@ranlib $(NAME)
 	@echo "\e[0;31mCompilation..."
+	@sleep 2
 	@$(CC) $(CFLAGS) main.c -L -lasm $(NAME)
-	@echo "\e[1;32mCOmpilation terminée !"
+	@echo "\e[1;32mCompilation terminée !"
 	@mv a.out run_test
+	@sleep 1
 	@echo "\e[1;33mLancez ./run_test"
 
 
 clean:
-	@$(RM) $(OBJS)
+	@echo "\e[0;31m[NETTOYAGE EN COURS ...]\e[0;m"
+	@sleep 2
+	$(RM) $(OBJS)
 
 fclean:		clean
 	@$(RM) $(NAME)
 	@$(RM) ./run_test
+	@echo "\e[1;32m[CLEAN] \e[0;m.o, run_test, libasm.a supprimés !"
 
 re:		fclean all

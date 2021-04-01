@@ -6,7 +6,7 @@
 /*   By: wluong <wluong@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 10:17:17 by wluong            #+#    #+#             */
-/*   Updated: 2021/03/31 00:09:27 by wluong           ###   ########.fr       */
+/*   Updated: 2021/03/31 11:36:13 by wluong           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,8 @@ int		main(int ac, char **av)
 		printf("ERROR\n");
 	else
 	{
-		ft_write(fd, "oui bonjoue", -3);
-		ret = ft_read(fd2, str, -11);
+		ft_write(fd, "walter luong", 12);
+		ret = ft_read(fd2, str, 12);
 		str[ret] = '\0';
 		printf("%s\n", str);
 	}
