@@ -9,7 +9,7 @@ ft_read:
 .exit_error:
 	neg rax
 	mov rdi, rax
-	call __errno_location
+	call __errno_location wrt ..plt
 	mov [rax], rdi
 	mov rax, -1
 	ret
