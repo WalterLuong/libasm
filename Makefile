@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: wluong <wluong@student.42.fr>              +#+  +:+       +#+         #
+#    By: user42 <user42@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/25 16:34:08 by wluong            #+#    #+#              #
-#    Updated: 2021/04/02 17:52:44 by wluong           ###   ########.fr        #
+#    Updated: 2021/04/02 21:45:49 by user42           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,10 +39,11 @@ $(NAME): $(OBJS)
 	@echo "\e[1;31mCompilation ...\e[0;m"
 	@sleep 1
 	@$(CC) $(CFLAGS) main.c -L -lasm $(NAME)
-	@echo "\e[1;32mCompilation terminée !"
+	@echo "\e[1;32mCompilation terminée !\e[0;m"
 	@mv a.out run_test
 	@sleep 0.5
-	@echo "\e[1;33mLancez ./run_test"
+	@echo "\e[1;33mLancez ./run_test pour tester toutes les fonctions\e[0;m"
+	@echo "\e[1;33m\e[3;33mVous pouvez lancez './run_test ft_***' (en remplaçant *** par strlen par exemple) pour tester une fonction en particulier.\e[0;m"
 
 
 clean:

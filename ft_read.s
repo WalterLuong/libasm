@@ -4,9 +4,9 @@ ft_read:
 	mov rax, 0
 	syscall
 	cmp rax, 0
-	je	.exit_error
+	jl	error_read
 	ret
-.exit_error:
+error_read:
 	neg rax
 	mov rdi, rax
 	call __errno_location wrt ..plt

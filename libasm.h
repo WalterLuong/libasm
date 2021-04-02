@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libasm.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wluong <wluong@student.42.fr>              +#+  +:+       +#+        */
+/*   By: user42 <user42@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/29 10:18:39 by wluong            #+#    #+#             */
-/*   Updated: 2021/04/02 17:59:11 by wluong           ###   ########.fr       */
+/*   Updated: 2021/04/02 22:19:07 by user42           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,8 @@
 # define GMAGENTA  "\033[1;35m"
 # define GCYAN  "\033[1;36m"
 # define GWHITE  "\033[1;37m"
+# define CRED  "\033[5;31m"
+# define IWHITE  "\033[3;37m"
 
 size_t		ft_strlen(const char *);
 size_t		ft_strcmp(const char *s1, const char *s2);
