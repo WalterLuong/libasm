@@ -6,7 +6,7 @@
 #    By: user42 <user42@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/03/25 16:34:08 by wluong            #+#    #+#              #
-#    Updated: 2021/04/02 21:45:49 by user42           ###   ########.fr        #
+#    Updated: 2021/04/03 13:43:15 by user42           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,6 +57,8 @@ clean:
 fclean:		clean
 	@$(RM) $(NAME)
 	@$(RM) ./run_test
+	@$(RM) write_file.txt
+	@$(RM) your_text.txt
 	@echo "\e[1;32m[CLEAN] \e[0;m.o, run_test, libasm.a supprimés !"
 
 re:		fclean all
